@@ -4,7 +4,7 @@
 # scale Z from 35nm to 40nm, now uPN is 40nm thickness
 uPN = nlapply(uPN, scale, center=FALSE, scale=c(1,1,35/40))
 
-pns_40 = nlapply(pns, scale, center=FALSE, scale=c(1,1,35/40))
+pns = nlapply(pns, scale, center=FALSE, scale=c(1,1,35/40))
 
 # update landmarks Z from 35nm to 40nm, and update the bridging transformation JFRC2013_FAFB13 accordingly
 elm.landmarks = elmr::elm.landmarks
@@ -23,7 +23,7 @@ nat.templatebrains::add_reglist(JFRC2013_FAFB13,
                                 sample = elmr::FAFB13)
 
 # figure to re-run:
-# Fig4D (checked), Fig5B & C, FigS7 B & C
-# Table S1 (NBLAST result need a transformation with 40nm thickness)
+# Fig4D (checked), Fig5B & C (checked), FigS7 B & C(checked)
+# Table S1 (checked)
 
 
