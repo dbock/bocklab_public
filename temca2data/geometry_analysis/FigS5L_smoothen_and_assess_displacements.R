@@ -51,6 +51,10 @@ p <- ggplot(t4, aes(x=section_num, y=delta)) +
   ylab("distance (um)") +
   xlab("section number")
 p
-ggsave("171206-displacement_delta_12um_ms_all_cutbg_smaller.pdf", width=19.92, height=6)
-# ggsave("171010-displacement_delta_12um_ms_KCs.pdf", width=19.92, height=6)
+# ggsave("171206-displacement_delta_12um_ms_all_cutbg_smaller.pdf", width=19.92, height=6)
 
+median(t4$delta, na.rm=TRUE)
+# median of all sections is 0.09 um
+
+quantile(t4$delta, .95, na.rm=TRUE)
+# 95% of sections are less than 0.57 um
