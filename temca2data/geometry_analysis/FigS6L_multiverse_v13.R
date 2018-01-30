@@ -229,3 +229,24 @@ frags = results[[3]]
 for (j in 1:length(frags)) {
   points3d(gl$d[frags[[j]], c("X","Y","Z")], color=t11[j], size=5)
 }
+
+# plot and save the output of discrepant skeletons between each of the 3 teams to gold standard---------
+open3d()
+plot3d(gl, col = 'yellow4', WithNodes = FALSE)
+t1_p = nl1_diff$d[which(nl1_diff$d$Parent == -1),'PointNo']
+points3d(gl$d[t1_p, c("X","Y","Z")], color='black', size=8)
+# writeWebGL(filename = "180129-GSvs5115189_descrepancy.html", width = 1000, height = 800)
+
+open3d()
+plot3d(gl, col = 'yellow4', WithNodes = FALSE)
+n_diff = nl2_diff
+t1_p = n_diff$d[which(n_diff$d$Parent == -1),'PointNo']
+points3d(gl$d[t1_p, c("X","Y","Z")], color='black', size=8)
+# writeWebGL(filename = "180129-GSvs5115222_descrepancy.html", width = 1000, height = 800)
+
+open3d()
+plot3d(gl, col = 'yellow4', WithNodes = FALSE)
+n_diff = nl3_diff
+t1_p = n_diff$d[which(n_diff$d$Parent == -1),'PointNo']
+points3d(gl$d[t1_p, c("X","Y","Z")], color='black', size=8)
+# writeWebGL(filename = "180129-GSvs5115228_descrepancy.html", width = 1000, height = 800)
