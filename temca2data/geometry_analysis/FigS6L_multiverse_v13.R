@@ -163,9 +163,9 @@ len_summary = group_by(len_tbl, skid) %>%
   mutate(twig_len =twig_len  / 1e3, um_error=(twig_len - sum_error_len) / error_counts)
 
 # skid error_counts sum_error_len twig_len um_error
-# 1 5115222            8      10.79023  287.143 34.54410
-# 2 5115189            7       6.46501  287.143 40.09686
-# 3 5115228            7      14.64428  287.143 38.92839
+# 1 5115222            8      10.79023  287.143 34.54410  # green
+# 2 5115189            7       6.46501  287.143 40.09686  # yellow
+# 3 5115228            7      14.64428  287.143 38.92839  # purple
 
 # ------------------------
   # play with the 1st team to get fragment length-------
